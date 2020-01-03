@@ -2,14 +2,14 @@ package com.epam.automation.pages;
 
 import com.epam.automation.model.HomePage;
 import com.epam.automation.model.User;
+import com.epam.automation.util.AutomationUtil;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SignInPage {
-
-    public static final String GITHUB_BASE_URL = "http://www.github.com";
 
     @FindBy(id = "login_field")
     private WebElement input1;
@@ -44,7 +44,7 @@ public class SignInPage {
     }
 
     public void open() {
-        mDriver.get(GITHUB_BASE_URL);
+        mDriver.get(AutomationUtil.getURL());
     }
 
     public HomePage signIn(User user){

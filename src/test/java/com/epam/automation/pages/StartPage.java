@@ -5,12 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.epam.automation.util.AutomationUtil;
+
 public class StartPage {
 
     @FindBy(xpath = "//a[text()='Sign in']")
     private WebElement butt0n;
 
-    public static final String GITHUB_BASE_URL = "http://www.github.com";
     private WebDriver driver;
 
     public StartPage(WebDriver driver) {
@@ -19,7 +20,7 @@ public class StartPage {
     }
 
     public void open() {
-        driver.get(GITHUB_BASE_URL);
+        driver.get(AutomationUtil.getURL());
     }
 
     public SignInPage invokeSignIn() {

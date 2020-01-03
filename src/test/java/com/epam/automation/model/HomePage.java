@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+import com.epam.automation.util.AutomationUtil;
 
-	public static final String GITHUB_BASE_URL = "http://www.github.com";
+public class HomePage {
 
 	@FindBy(xpath = "//button[@aria-label='Switch account context']/span")
 	private WebElement linkLoggedInUser;
@@ -20,7 +20,7 @@ public class HomePage {
 	}
 
 	public void open() {
-		driver.get(GITHUB_BASE_URL);
+		driver.get(AutomationUtil.getURL());
 	}
 
 	public String getLoggedInUserName() {
