@@ -27,11 +27,7 @@ public class HomePage {
 		return linkLoggedInUser.getText();
 	}
 
-	public Integer hasUserLoggedIn() {
-		if (linkLoggedInUser.getText() != "") {
-			return 1;
-		} else {
-			return -1;
-		}
+	public boolean hasUserLoggedIn() {
+		return (!linkLoggedInUser.getText().equals(""));
 	}
 }
