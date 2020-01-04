@@ -9,7 +9,7 @@ import com.epam.automation.util.AutomationUtil;
 
 public class StartPage {
 
-    @FindBy(xpath = "//a[text()='Sign in']")
+    @FindBy(xpath = "//a[@href='/login']")
     private WebElement butt0n;
 
     private WebDriver driver;

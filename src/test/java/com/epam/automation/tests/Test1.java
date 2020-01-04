@@ -1,9 +1,6 @@
 package com.epam.automation.tests;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
 import org.junit.Assert;
 import org.junit.Test;
