@@ -19,10 +19,6 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void open() {
-		driver.get(AutomationUtil.getURL());
-	}
-
 	public String getLoggedInUserName() {
 		return linkLoggedInUser.getText();
 	}

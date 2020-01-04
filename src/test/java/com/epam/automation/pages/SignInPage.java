@@ -43,10 +43,6 @@ public class SignInPage {
         }
     }
 
-    public void open() {
-        mDriver.get(AutomationUtil.getURL());
-    }
-
     public HomePage signIn(User user){
         return this.signIn(user.getUsername(), user.getPassword());
     }
